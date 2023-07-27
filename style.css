@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --fc-heading: #b52184;
+  --fc-text: #312d64;
+  --fc-footer: #fff;
+
+  --bg-body: #f9f4fb;
+  --bg-main: linear-gradient(134deg, #343193 0%, #302c63 100%);
+  --bg-card: #fff;
+}
+
+.container {
+  padding: 0 3.2rem;
+}
+
+body {
+  background: var(--bg-body);
+  font-size: 1.6rem;
+  color: var(--fc-text);
+}
+
+h1,
+h2,
+legend {
+  color: var(--fc-heading);
+  font-weight: 900;
+}
+
+p {
+  font-weight: 600;
+}
+
+:root,
+body,
+p,
+input,
+button {
+  font-family: "Mulish", sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 9.8rem;
+}
+
+header .astronaut {
+  max-width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+header .wrapper-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.wrapper-content-text h1 {
+  font-size: 3.2rem;
+}
+
+.wrapper-content-text p {
+  font-size: 2rem;
+}
+
+.wrapper-content-text img {
+  height: 10.5rem;
+  margin-top: 3rem;
+}
+
+/* MAIN */
+
+main {
+  background: var(--bg-main);
+  padding: 5.2rem 0;
+}
+
+.wrapper-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  background-color: var(--bg-card);
+  border-radius: 2rem;
+  padding: 2.6rem;
+}
+
+.card img {
+  width: 8rem;
+}
+
+.info-card h2 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+/* Section form */
+form {
+  margin-top: 7.8rem;
+  margin-bottom: 6.5rem;
+}
+
+form fieldset {
+  border: 0;
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+}
+
+legend {
+  font-size: 3.2rem;
+  margin-bottom: 4.3rem;
+}
+
+.input-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+.input-wrapper label {
+  text-align: flex;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+}
+
+.input-name {
+  background: url(./assets/person.svg);
+  background-repeat: no-repeat;
+  background-position: 1.5rem;
+}
+
+.input-email {
+  background: url(./assets/at.svg);
+  background-repeat: no-repeat;
+  background-position: 1.5rem;
+}
+
+.input-wrapper input {
+  padding: 1.2rem 1.2rem 1.2rem 4.5rem;
+}
+
+.input-wrapper textarea {
+  height: 12.6rem;
+  padding: 1.2rem 1.6rem;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  border-radius: 1.6rem;
+  border: 0.15rem solid var(--fc-text);
+  background-color: var(--bg-body);
+}
+
+.input-wrapper input::placeholder,
+textarea::placeholder {
+  color: var(--fc-text);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+}
+
+button {
+  width: 15.1rem;
+  padding: 1rem;
+
+  border: 0;
+  border-radius: 1.6rem;
+
+  color: var(--fc-footer);
+  background: var(--bg-main);
+
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: capitalize;
+}
+
+.stars {
+  display: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.6rem 1.6rem;
+  background: var(--bg-main);
+  color: var(--fc-footer);
+}
+
+/* Media */
+
+@media (min-width: 1100px) {
+  .container {
+    width: min(144rem, 100%);
+    margin-inline: auto;
+  }
+
+  /* Header */
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  header .astronaut {
+    max-width: 100%;
+  }
+
+  header .wrapper-content-text {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .wrapper-content-text h1 {
+    font-size: 5.8rem;
+  }
+
+  .wrapper-content-text p {
+    font-size: 3.2rem;
+  }
+
+  .wrapper-content-text img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* main */
+  main {
+    padding: 6.4rem 0;
+  }
+
+  .wrapper-cards {
+    flex-direction: row;
+    gap: 6rem;
+  }
+
+  .card {
+    gap: 4rem;
+    padding: 3.2rem;
+  }
+
+  /* Section form */
+  section {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    display: flex;
+    justify-content: space-between;
+    background: url(./assets/stars.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  .input-wrapper input, .input-wrapper textarea {
+    width: 45%;
+  }
+
+  legend {
+    font-size: 4.2rem;
+    margin-bottom: 3rem;
+  }
+}
